@@ -1,0 +1,72 @@
+apt-get	update
+apt-get install emacs
+apt-get install git
+apt-get install aria2
+apt-get install chrommiu
+apt-get install fcitx-sunpinyin
+apt-get install mplayer
+apt-get install sdcv
+
+
+#apt-get  URL Resources
+emacs -nw /etc/apt/sources.list
+deb http://httpredir.debian.org/debian jessie main
+deb-src http://httpredir.debian.org/debian jessie main
+deb http://httpredir.debian.org/debian jessie-updates main
+deb-src http://httpredir.debian.org/debian jessie-updates main
+deb http://security.debian.org/ jessie/updates main
+deb-src http://security.debian.org/ jessie/updates main
+# 这个ftp的源速度很快（将http改为ftp也可）
+deb http://ftp.debian.org/debian/ squeeze main non-free contrib
+deb http://ftp.debian.org/debian/ squeeze-proposed-updates main non-free contrib
+
+#deb http://ftp.us.debian.org/debian/ squeeze main non-free contrib
+#deb http://ftp.us.debian.org/debian/ squeeze-proposed-updates main non-free contrib
+
+# 官方安全更新的源
+deb http://security.debian.org/ squeeze/updates main
+
+http://www.debian-multimedia.org/
+
+
+
+#sdcv  Dictionary(下载词典)
+aria2c  -x5	http://abloz.com/huzheng/stardict-dic/zh_CN/stardict-oxford-gb-2.4.2.tar.bz2
+aria2c -x5	http://abloz.com/huzheng/stardict-dic/zh_CN/stardict-langdao-ec-gb-2.4.2.tar.bz2
+#sdvc  Config（配置词典）
+mkdir /usr/share/stardict/dic
+cp stardict*.tar.bz2  /usr/share/stardict/dic
+cd /usr/sharestardict/dic 
+tar -jxvf stardict*
+rm *.tar.bz2
+
+
+#ShadowsocksConfig
+apt-get install shadowsocks
+cd /etc/shadowsocks
+emacs -nw config.json
+{
+    "server":"my_server_ip",
+        "server_port":8388,
+	    "local_address": "127.0.0.1",
+	        "local_port":1080,
+		    "password":"mypassword",
+		        "timeout":300,
+			    "method":"aes-256-cfb",
+			        "fast_open": false,
+				    "workers": 1
+				    }
+
+#shadowsocks 启动命令
+sslocal -c /etc/shadowsocks/config.json
+
+
+#双系统windows启动项显示
+cd /etc/grub.d/
+#10_linux是Debian的系统启动
+cp 30_os-prober 09_os-prober
+#修改30_os-prober的可执行权限
+chmod 666 30_os-prober
+#更新grub
+update-grub
+#重启系统验证
