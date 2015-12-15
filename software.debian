@@ -60,6 +60,15 @@ emacs -nw config.json
 #shadowsocks 启动命令
 sslocal -c /etc/shadowsocks/config.json
 
+#Flash 安装
+1.解压
+2.以非root用户操作：mkdir -p ~/.mozilla/plugins/
+3.cp libflashplayer.so  ~/.mozilla/plugins/
+4.需要root 权限：cp libflashplayer.so  /usr/lib/iceweasel/
+5.重启下iceweasel
+
+
+
 
 #双系统windows启动项显示
 cd /etc/grub.d/
@@ -89,8 +98,11 @@ grep	--打印匹配行
 wc	--打印文件中换行符,字和字节个数
 head	--输出文件第一部分
 tail	--输入文件最后一部分
+echo	--显示一行文本
 
 
-
-
-
+#echo用法
+字符展开	echo *
+路径名展开	echo .*		#隐藏文件夹显示
+波浪线展开	echo ～alter	#alter用户的家目录
+算数表达式展开	echo $((3+8))	#算数表达式格式：$((expression))
