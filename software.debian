@@ -80,29 +80,7 @@ chmod 666 30_os-prober
 update-grub
 #重启系统验证
 
-#Linxu命令的使用
-help	--说明解释一个命令名
-which	--显示执行哪一个命令程序
-man	--显示命令手册页
-apropos	--显示一系列适合的命令
-info	--显示命令info
-whatis	--显示一个命令的简洁描述
-alias	--创建命令别名
-#linux重定向命令
-#linux重定向符">"
-#linux追加重定向">>"
-cat	--连接文件
-sort	--排序文件行
-uniq	--报道或省略重复行
-grep	--打印匹配行
-wc	--打印文件中换行符,字和字节个数
-head	--输出文件第一部分
-tail	--输入文件最后一部分
-echo	--显示一行文本
 
 
-#echo用法
-字符展开	echo *
-路径名展开	echo .*		#隐藏文件夹显示
-波浪线展开	echo ～alter	#alter用户的家目录
-算数表达式展开	echo $((3+8))	#算数表达式格式：$((expression))
+
+
