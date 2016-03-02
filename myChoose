@@ -1,0 +1,24 @@
+目录
+
+
+类别		首选		备选
+发行版		archlinux	freeBSD		gentoo		debian
+Shell		zsh		bash
+终端		rxvt-unicode	tilda		screen
+编辑器		Emacs		Vim		jed
+文档写作	docbook		reST		muse
+版本控制	git		svn
+加密		PGP		truecrypt
+窗口管理器	awesome		openbox		xfce4
+浏览器		Firefox		liferea
+桌面小程序	conky	 
+输入法		Fcitx		scim
+下载工具	aria2		lftp		wget
+播放器		mplayer		w32codecs	 
+图片浏览	gqview	 
+电子阅读	evince	 
+词典		sdcv	 
+文件管理	tar		gzip		p7zip		squeeze		unzip		unrar
+日程管理	osmo
+网络服务	sshd		pureftpdlighttpd	php		mysql		phpmyadmin
+编程		C		python		ruby		lisp
