@@ -44,15 +44,20 @@ echo `apt-get -y install shadowsocks`
 echo  "----------over install shadownsocks---------"
 
 echo  "----------download sdcv dictionary----------"
-echo `aria2c -x5  http://abloz.com/huzheng/stardict-dic/zh_CN/stardict-oxford-gb-2.4.2.tar.bz2`
-echo `aria2c  -x5     http://abloz.com/huzheng/stardict-dic/zh_CN/stardict-oxford-gb-2.4.2.tar.bz2`
+echo `aria2c -x5 http://abloz.com/huzheng/stardict-dic/zh_CN/stardict-langdao-ec-gb-2.4.2.tar.bz2`
+echo `aria2c -x5 http://abloz.com/huzheng/stardict-dic/zh_CN/stardict-oxford-gb-2.4.2.tar.bz2`
 echo  "----------over download  sdcv dictionary---------"
 
 echo  "----------sdcv dictionay config----------"
+echo `mkdir /usr/share/stardict`
 echo `mkdir /usr/share/stardict/dic`
 echo `cp stardict*.tar.bz2  /usr/share/stardict/dic`
-echo `tar -jxvf /usr/sharestardict/dic/stardict*`
-echo `rm /usr/sharestardict/dic/*.tar.bz2`
+echo `rm -rf ./stardict*.tar.bz2`
+for stardic in /usr/share/stardict/dic/*.tar.bz2
+do
+    cd  /usr/share/stardict/dic/
+    tar -jxvf $stardic;
+done
 echo  "----------over sdcv dictionary config---------"
 
 echo  "----------shadowsocks config----------"
