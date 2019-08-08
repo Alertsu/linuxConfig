@@ -44,8 +44,8 @@ echo `apt-get -y install shadowsocks`
 echo  "----------over install shadownsocks---------"
 
 echo  "----------download sdcv dictionary----------"
-echo `aria2c -x5 http://abloz.com/huzheng/stardict-dic/zh_CN/stardict-langdao-ec-gb-2.4.2.tar.bz2`
-echo `aria2c -x5 http://abloz.com/huzheng/stardict-dic/zh_CN/stardict-oxford-gb-2.4.2.tar.bz2`
+echo `aria2c -x5 http://download.huzheng.org/zh_CN/stardict-langdao-ec-gb-2.4.2.tar.bz2`
+echo `aria2c -x5 http://download.huzheng.org/zh_CN/stardict-langdao-ce-gb-2.4.2.tar.bz2`
 echo  "----------over download  sdcv dictionary---------"
 
 echo  "----------sdcv dictionay config----------"
